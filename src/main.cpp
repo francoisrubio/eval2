@@ -1,65 +1,57 @@
 #include <iostream>
 using namespace std;
 
-int main ()  { 
+int main() {
 
-//variable permettant de compter le nombre de places disponibles
+  // variable permettant de compter le nombre de places disponibles
   int nbrePlaces = 10;
-  //variable permettant de récupérer le choix de l'utilisateur
+  // variable permettant de récupérer le choix de l'utilisateur
   int choix;
-  cout << "Quel est votre choix ?"<< endl <<endl;
+  cout << "Quel est votre choix ?" << endl << endl;
 
- do {
-  // partie à compléter à partir du 3.1
+  do {
+    // partie à compléter à partir du 3.1
 
-  std::cout << "********   Evaluation 2    *********\n\n";
-  std::cout << " 1 - Entrée dans le parking\n\n";
-  std::cout << " 2 - Nombre de places disponibles\n\n";
-  std::cout << " 3 - Sortir du parking\n\n";
-  std::cout << " 4 - Quitter\n\n";
- 
-  cin >> choix;
+    std::cout << "********   Evaluation 2    *********\n\n";
+    std::cout << " 1 - Entrée dans le parking\n\n";
+    std::cout << " 2 - Nombre de places disponibles\n\n";
+    std::cout << " 3 - Sortir du parking\n\n";
+    std::cout << " 4 - Quitter\n\n";
 
-  switch (choix) {
+    cin >> choix;
 
-  case 1:
+    switch (choix) {
 
-    cout << "Vous avez choisi Entrée dans le parking\n";
-    break;
-  case 2:
+    case 1:
 
-    cout << "Vous avez choisi Nombre de places disponibles\n";
-    break;
-  case 3:
+      cout << "Vous avez choisi Entrée dans le parking\n";
 
-    cout << " Vous avez choisi Sortir du parking\n";
-    break;
-   
+      nbrePlaces--;
+
+      break;
+    case 2:
+
+      cout << "Vous avez choisi Nombre de places disponibles\n";
+
+      cout << nbrePlaces ;
+      break;
+    case 3:
+
+      cout << " Vous avez choisi Sortir du parking\n";
+
+      nbrePlaces++;
+      break;
+
     case 4:
-   
-     cout << "Vous avez choisi Quitter\n";
-    break;
 
-      default:
-    break;
+      cout << "Vous avez choisi Quitter\n";
 
-  }
-  } while (choix<4);
-  
-  
-   
-    
-    return 0;
-  }
+      cout << "Au-revoir";
+        break;
 
- 
-   
+      cin >> choix;
+    }
+  } while (choix < 4);
 
-
-
-
-
-
-
-
-
+  return 0;
+}
