@@ -8,8 +8,8 @@ int main ()  {
   //variable permettant de récupérer le choix de l'utilisateur
   int choix;
   cout << "Quel est votre choix ?"<< endl <<endl;
-  
- 
+
+ do {
   // partie à compléter à partir du 3.1
 
   std::cout << "********   Evaluation 2    *********\n\n";
@@ -40,11 +40,20 @@ int main ()  {
      cout << "Vous avez choisi Quitter\n";
     break;
 
-  
-  return 0;
+      default:
+    break;
 
-}
-}
+  }
+  } while (choix<4);
+  
+  
+   
+    
+    return 0;
+  }
+
+ 
+   
 
 
 
